@@ -13,7 +13,7 @@ def index(request):
 
 
 def about(request):
-    context_dict = {'boldmessage': "Example of static image method."}
+    context_dict = {'boldmessage': "Media file of a cat:"}
     return render(request, 'rango/about.html', context=context_dict)
 
 

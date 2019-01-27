@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load staticfiles %}
 <html>
 
     <head>
@@ -7,10 +6,9 @@
     </head>
    <body>
         <div>
- 	    <img src ="{% static "rangostaticexample.jpg" %}"
-                 alt="Rango static example" />
-            This tutorial has been put together by Katarina Turinicova <br /> 
+            This tutorial has been put together by Katarina Turinicova. <br /> 
             <strong>{{ boldmessage }}</strong><br />
+	    <img src ="{{MEDIA_URL}}cat.jpg" width=500px />
 	   
         </div>
         <div>
