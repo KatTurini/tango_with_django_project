@@ -13,6 +13,10 @@ def index(request):
 
 
 def about(request):
-    return HttpResponse("Rango says this is the about page. \
-                        <br/><a href='/rango/'>index</a>")
+    context_dict = {'boldmessage': "Example of static image method."}
+    return render(request, 'rango/about.html', context=context_dict)
+
+
+    # return HttpResponse("Rango says this is the about page. \
+    # <br/><a href='/rango/'>index</a>")
 
