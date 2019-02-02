@@ -23,13 +23,14 @@
 	
 	<div>
 	{% if category %}	
-		<a href="/rango/category/{{category.slug}}/add_page/">Add Page</a> <br/>
+		<a href="{% url 'rango:add_page' category.slug %}">Add Page</a> <br/>
 	{% else %}
-		<a href="/rango/category/add_category/">Add a New Category</a> <br/>
+		<a href="{% url 'rango:add_category' %}">Add a New Category</a> <br/>
 	{% endif %}
 	</div>
+	
 	<div>
-	<a href="/rango/">Index</a><br />
+	<a href="{% url 'rango:index' %}">Index</a><br />
 	</div>
 </body>
 </html>
