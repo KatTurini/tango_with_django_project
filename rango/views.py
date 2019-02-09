@@ -37,8 +37,8 @@ def user_login(request):
                 error_message = 'Your Rango account is disabled.'
                 return render(request, 'rango/login.html', {'error_message': error_message})
         else:
-            print("Invalid login details: {0}, {1}".format(username, password))
-            return HttpResponse("Invalid login details supplied.")
+            error_message = 'Invalid login details supplied: {0}, {1}'.format(username, password)
+            return render(request, 'rango/login.html', {'error_message':error_message})
     else:
         return render(request, 'rango/login.html', {})
 
