@@ -6,20 +6,17 @@
 	{% endblock %}
 	
 	{% block body_block %}
-	<h1> Rango says... </h1>
+		<h1> Rango says here is the about page. </h1>
         <div>
-		here is the about page.
-		<p>
+        This tutorial has been put together by Katarina Turinicova. <br /> 
+		</p>
 		</div>
 		<div>
-            This tutorial has been put together by Katarina Turinicova. <br /> 
-		
-		</div>
 		<p>
 		<img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
 		<p>
         <strong>{{ boldmessage }}</strong><br />
-	    <img src ="{{MEDIA_URL}}cat.jpg" width=500px />
-	   
+	    <img src="{{MEDIA_URL}}cat.jpg" alt="Picture of a cat" width=500px />
+		</div>
 		<p>visits: {{ visits }} </p>
 	{% endblock %}
